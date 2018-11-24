@@ -77,7 +77,7 @@ const getSuggests = (qs) => {
 const xhr = new XMLHttpRequest();
 xhr.onreadystatechange = observeStandsRequest;
 xhr.responseType = "json";
-xhr.open("GET", chrome.extension.getURL('/stands.json'), true);
+xhr.open("GET", chrome.extension.getURL('../data/stands.json'), true);
 xhr.send();
 
 chrome.omnibox.onInputChanged.addListener((text, suggest) => {
